@@ -1,0 +1,58 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+    <title></title>
+    
+</head>
+<style>
+	.big{
+		margin-left: 30%;
+		margin-top: 5%;
+		width: 400px;
+		height: 200px;
+		background-color: lightblue;
+		border: 3px solid green;
+	}
+	h1{
+		color: red;
+		text-align: center;
+	}
+	.a{
+		text-align: center;
+	}
+</style>
+
+<script >
+	function Abc(){
+		var x;
+		var text;
+		var x = document.forms["myForm"]["txtName"].value;
+		if(x == ""){
+			alert("Bạn chưa nhập cái dell gì cả !");
+			return false;
+		}else{
+		x = document.getElementById("abc").value;
+		
+			text = alert("Cân nặng của bạn là : " + x + " kg  ^^") ;
+		}
+	}
+</script>
+
+<body>
+	<div class="big">
+		    <h1>Ứng dụng Bói cân nặng</h1>
+
+			<div class="a"> 
+				<form name="myForm" action="#" onsubmit="return Abc()" method="post">
+				<p> <b>Nhập cân nặng của bạn : </b></p>
+				<input type="text" id ="abc" name="txtName">
+				<button type="button" onclick="Abc()">Bói</button>
+			</form>
+			</div>
+	</div>
+	
+    
+    <!-- https://www.google.com/maps/@20.9811472,105.9523738,15z -->
+</body>
+
+</html>
