@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dog</title>
+	<link rel="shortcut icon" href="css\images\red.ico">
+</head>
+<style>
+	html, body {
+	 background: linear-gradient(32deg, #00b16a, #3fc380);
+	 min-height: 100vh;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 cursor: none;
+}
+ .dog, .ball {
+	 position: absolute;
+	 transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px));
+}
+ .dog {
+	 font-size: 4rem;
+	 transition: transform 0.5s 0.5s cubic-bezier(0.69, 1.46, 1, 1.26);
+}
+ .dog__emoji {
+	 animation: excite 0.05s infinite alternate;
+}
+ .ball {
+	 font-size: 1.5rem;
+	 transition: transform 0s;
+}
+ @-moz-keyframes excite {
+	 0% {
+		 transform: translateY(5%);
+	}
+	 100% {
+		 transform: translateY(-5%);
+	}
+}
+ @-webkit-keyframes excite {
+	 0% {
+		 transform: translateY(5%);
+	}
+	 100% {
+		 transform: translateY(-5%);
+	}
+}
+ @-o-keyframes excite {
+	 0% {
+		 transform: translateY(5%);
+	}
+	 100% {
+		 transform: translateY(-5%);
+	}
+}
+ @keyframes excite {
+	 0% {
+		 transform: translateY(5%);
+	}
+	 100% {
+		 transform: translateY(-5%);
+	}
+}
+ 
+</style>
+<body>
+<div class="dog">
+    <div class="dog__emoji">🐶</div>
+</div>
+<div class="ball">⚽️</div>
+</body>
+<script>
+	var ROOT =document.documentElement;
+	var update= function update(e){
+		ROOT.style.setProperty('--x',e.x - innerWidth / 2);
+		ROOT.style.setProperty('--y',e.y - innerHeight / 2);
+	};
+	window.addEventListener('mousemove',update);
+</script>
+</html>
