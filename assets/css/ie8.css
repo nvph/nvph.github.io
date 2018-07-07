@@ -11,6 +11,7 @@
 		border: solid 1px #fff;
 		border-radius: 100%;
 		-ms-behavior: url("assets/js/ie/PIE.htc");
+		text-decoration: none;
 	}
 
 		#header nav a:before {
